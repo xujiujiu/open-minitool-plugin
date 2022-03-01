@@ -1,0 +1,29 @@
+{
+  "name": "open-wxtool-plugin",
+  "version": "1.0.0",
+  "description": "自动化打开微信开发者工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xujiujiu/open-wxtool-plugin.git"
+  },
+  "keywords": [
+    "wxtool",
+    "webpack",
+    "plugin"
+  ],
+  "author": "xujiujiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xujiujiu/open-wxtool-plugin/issues"
+  },
+  "homepage": "https://github.com/xujiujiu/open-wxtool-plugin#readme",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "shelljs": "^0.8.5"
+  }
+}
