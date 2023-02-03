@@ -1,4 +1,5 @@
-const { initWxConfig, operateWxCli } = require('./src/weapp-ci')
+const { openWxCli } = require('./src/weapp-ci')
+const { openAlipayCli } = require('./src/alipay-ci')
 
 function once(fn) {
   let called = false
@@ -36,11 +37,9 @@ openWxTool.prototype.apply = function (compiler) {
   let hasWatch = this.hasWatch
   const executeOpen = once(function () {
     if (this.ciType === 'wx') {
-      initWxConfig().then(res => {
-        operateWxCli(projectPath, res)
-      })
+      openWxCli(projectPath);
     } else {
-      // TODO alipay
+      openAlipayCli(projectPath);
     }
   })
   compiler.plugin('watch-run', function checkWatchingMode(watching, done) {
